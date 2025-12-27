@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monster Match Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Monster Match home">
+          <span class="brand-title">MONSTER MATCH</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="index.html#matches">Matches</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <section class="form-card">
+          <h1 class="page-title">Create your account</h1>
+          <p class="page-subtitle">Fields marked with * are required.</p>
+
+          <form class="form" action="#" method="post" enctype="multipart/form-data">
+            <fieldset class="fieldset">
+              <legend class="legend">Login</legend>
+
+              <div class="field">
+                <label for="email">Email *</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="name@example.com"
+                  aria-describedby="email-help email-error"
+                />
+                <p class="help" id="email-help">Used for login and account updates.</p>
+                <p class="error" id="email-error">Please enter a valid email address.</p>
+              </div>
+
+              <div class="field">
+                <label for="password">Password *</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  minlength="8"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
+                  autocomplete="new-password"
+                  aria-describedby="pw-help pw-error"
+                />
+                <p class="help" id="pw-help">Min 8 chars, at least 1 letter and 1 number.</p>
+                <p class="error" id="pw-error">Password does not meet the requirements.</p>
+              </div>
+
+              <div class="field">
+                <label for="password2">Repeat password *</label>
+                <input
+                  id="password2"
+                  name="password2"
+                  type="password"
+                  required
+                  minlength="8"
+                  autocomplete="new-password"
+                  aria-describedby="pw2-help"
+                />
+                <p class="help" id="pw2-help">Re-type to avoid typos.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="legend">Profile</legend>
+
+              <div class="grid-2">
+                <div class="field">
+                  <label for="username">Username *</label>
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    required
+                    minlength="3"
+                    maxlength="20"
+                    autocomplete="username"
+                    placeholder="e.g. Ultramonyy"
+                    aria-describedby="user-help user-error"
+                  />
+                  <p class="help" id="user-help">3–20 characters.</p>
+                  <p class="error" id="user-error">Please enter a username (min 3 chars).</p>
+                </div>
+
+                <div class="field">
+                  <label for="age">Age *</label>
+                  <select id="age" name="age" required aria-describedby="age-error">
+                    <option value="">Select…</option>
+                    <option>18</option><option>19</option><option>20</option><option>21</option><option>22</option>
+                    <option>23</option><option>24</option><option>25</option><option>26</option><option>27</option>
+                    <option>28</option><option>29</option><option>30</option><option>31</option><option>32</option>
+                    <option>33</option><option>34</option><option>35</option><option>36</option><option>37</option>
+                    <option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+                    <option>43</option><option>44</option><option>45</option><option>46</option><option>47</option>
+                    <option>48</option><option>49</option><option>50</option><option>51</option><option>52</option>
+                    <option>53</option><option>54</option><option>55</option><option>56</option><option>57</option>
+                    <option>58</option><option>59</option><option>60</option>
+                  </select>
+                  <p class="error" id="age-error">Please select your age (18+).</p>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="field">
+                  <label for="city">City *</label>
+                  <input
+                    id="city"
+                    name="city"
+                    type="text"
+                    required
+                    autocomplete="address-level2"
+                    placeholder="e.g. Aarhus"
+                    aria-describedby="city-error"
+                  />
+                  <p class="error" id="city-error">Please enter a city.</p>
+                </div>
+
+                <div class="field">
+                  <label for="gender">Gender *</label>
+                  <select id="gender" name="gender" required aria-describedby="gender-error">
+                    <option value="">Select…</option>
+                    <option value="woman">Woman</option>
+                    <option value="man">Man</option>
+                    <option value="nonbinary">Non-binary</option>
+                    <option value="other">Other</option>
+                    <option value="nosay">Prefer not to say</option>
+                  </select>
+                  <p class="error" id="gender-error">Please select an option.</p>
+                </div>
+              </div>
+
+              <div class="field">
+                <p class="label">Work style *</p>
+                <div class="choices" role="radiogroup" aria-describedby="work-error">
+                  <label><input type="radio" name="workStyle" value="remote" required /> Remote</label>
+                  <label><input type="radio" name="workStyle" value="hybrid" /> Hybrid</label>
+                  <label><input type="radio" name="workStyle" value="onsite" /> On-site</label>
+                </div>
+                <p class="error" id="work-error">Please choose a work style.</p>
+              </div>
+
+              <div class="field">
+                <p class="label">Interests</p>
+                <div class="choices">
+                  <label><input type="checkbox" name="interests" value="gaming" /> Gaming</label>
+                  <label><input type="checkbox" name="interests" value="fitness" /> Fitness</label>
+                  <label><input type="checkbox" name="interests" value="music" /> Music</label>
+                  <label><input type="checkbox" name="interests" value="coding" /> Coding</label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="drink">Favorite Monster *</label>
+                <input
+                  id="drink"
+                  name="drink"
+                  type="text"
+                  required
+                  placeholder="e.g. Ultra, Mango Loco..."
+                  aria-describedby="drink-error"
+                />
+                <p class="error" id="drink-error">Please enter your favorite.</p>
+              </div>
+
+              <div class="field">
+                <label for="bio">Bio</label>
+                <textarea
+                  id="bio"
+                  name="bio"
+                  rows="4"
+                  maxlength="240"
+                  placeholder="Write a short bio..."
+                  aria-describedby="bio-help"
+                ></textarea>
+                <p class="help" id="bio-help">Optional. Max 240 characters.</p>
+              </div>
+
+              <div class="field">
+                <label for="energy">Energy level (0–100) *</label>
+                <input id="energy" name="energy" type="range" min="0" max="100" step="5" required />
+                <p class="help">0 (chill) – 100 (max energy).</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="legend">Upload</legend>
+
+              <div class="field">
+                <label for="photo">Upload photo *</label>
+                <input
+                  id="photo"
+                  name="photo"
+                  type="file"
+                  required
+                  accept=".jpg,.jpeg,.png"
+                  aria-describedby="photo-help photo-error"
+                />
+                <p class="help" id="photo-help">JPG/PNG accepted.</p>
+                <p class="error" id="photo-error">Please upload a JPG or PNG file.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="legend">Consent</legend>
+
+              <label class="check">
+                <input type="checkbox" name="terms" required />
+                I accept the terms *
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="updates" />
+                Send me updates (optional)
+              </label>
+            </fieldset>
+
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Create account</button>
+              <a class="btn btn-secondary" href="index.html">Back</a>
+              <button class="btn btn-ghost" type="reset">Reset</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© Monster Match</p>
+        <a href="index.html">Home</a>
+      </div>
+    </footer>
+  </body>
+</html>
