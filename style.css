@@ -157,11 +157,7 @@ main h1 {
 }
 
 
-input:focus,
-select:focus,
-    textarea:focus {
-      outline-offset: 2px;
-}
+
 
 
 
@@ -220,7 +216,6 @@ select {
   color: #888;
 }
 
-.choices label,
 .check {
   display: flex;
   align-items: center;
