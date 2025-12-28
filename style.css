@@ -1,18 +1,29 @@
-@media (max-width: 600px) {
-  #headerLogo {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+@media (min-width: 600px) {
+  .form-card {
+    max-width: 520px;
   }
-  #headerLogo img {
-    height: 48px;
+  header {
+    justify-content: center;
+  }
+
+  input[type="range"] {
+    width: 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  .form-card {
+    max-width: 900px;
   }
 }
 
 html,
 body {
-  font-family: sans-serif;
-  margin: 0px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: black;
   color: white;
   text-align: center;
@@ -26,6 +37,12 @@ header {
   flex-wrap: wrap;
 }
 
+#headerLogo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 header .button {
   display: inline-block;
   padding: 12px 24px;
@@ -33,7 +50,7 @@ header .button {
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   margin-left: 20px;
   margin-bottom: 60px;
@@ -42,11 +59,19 @@ header .button {
 header .button:hover {
   background-color: #29a844;
 }
+main {
+  flex: 1;
+}
 
 main h1 {
   color: #65ba21;
   font-size: 2.4rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#indexUpperPicture img {
+  max-width: 450px;
+  height: auto;
 }
 
 #whyYouShould {
@@ -73,29 +98,46 @@ main h1 {
   margin-bottom: 14px;
 }
 
-/*____________________________________________________________________*/
+.quote-block h2 {
+  color: #65ba21;
+  font-size: 1.9rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.quote-block {
+  margin-bottom: 44px;
+}
+#downloadImg img {
+  max-width: 140px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(101, 186, 33, 0.25);
+}
+/*__________________END INDEX_____________->____________START SIGNUPFORM_________________________*/
 
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 16px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   color: #abec76;
 }
 
 .form-card {
   flex-wrap: wrap;
-  background: #0e0e0e;
+  background: #0d0e0d;
   border-radius: 12px;
   box-shadow: 0 0 0 1px rgba(101, 186, 33, 0.25);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding: 45px;
+  padding: 24px;
+}
+
+.form-card h1 {
+  margin-top: 0px;
 }
 
 input,
-select,
 textarea {
   background: black;
   color: white;
@@ -103,8 +145,23 @@ textarea {
   border-radius: 6px;
   padding: 10px 12px;
   font-size: 1rem;
-  cursor: pointer;
+  margin: 7px;
+  cursor: text;
+}
+select,
+button,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+input[type="file"] {
+  background: black;
+  color: white;
+  border: 1px solid #65ba21;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
   margin: 4px;
+  cursor: pointer;
 }
 
 input::placeholder,
@@ -113,22 +170,25 @@ textarea::placeholder {
 }
 
 .inline-group1 {
-  margin-top: 19px;
+  margin-top: 14px;
   margin-bottom: 14px;
 }
 .inline-group2 {
   margin-top: 14px;
 }
+
+.inline-group1 p,
+.inline-group2 p,
 .inline-group3 {
-  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+.inline-group3 {
+  margin-top: 14px;
   margin-bottom: 14px;
 }
 select {
   color: #888;
-}
-
-select:valid {
-  color: white;
 }
 
 .choices label,
@@ -137,6 +197,7 @@ select:valid {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  color: #abec76;
 }
 
 .btn {
@@ -146,24 +207,24 @@ select:valid {
   cursor: pointer;
   text-decoration: none;
   margin: 4px;
-  border: 1px solid #ffffff;
-  background: #65ba21;
+  border: 1px solid #abec76;
 }
 
 .btn-primary {
   background: #65ba21;
   color: black;
+  font-size: 1rem;
 }
 
 .btn-primary:hover {
-  background: #29a844;
+  background: rgb(172, 216, 90);
 }
 
 .btn-secondary {
   background: #222;
   color: white;
   border: 1px solid #65ba21;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .btn-secondary:hover {
@@ -176,12 +237,16 @@ input[type="range"] {
   height: 1px;
   background: #65ba21;
   border-radius: 4px;
-  border: 1px solid #ffffff;
-  margin-bottom: 9px;
-  cursor: pointer;
+  margin-bottom: 14px;
 }
 
 .site-footer {
   border-top: 1px solid rgba(101, 186, 33, 0.3);
-  margin-top: 64px;
+  padding: 12px 0;
+  text-align: center;
+  width: 100%;
+  background-color: black;
+  color: #abec76;
+  font-size: 0.9rem;
+  margin-top: 20px;
 }

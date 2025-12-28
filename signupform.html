@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up – Monster Match</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up – Monster Match</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-<header>
-  </div>
+  <body>
+    <header>
       <div id="headerLogo">
         <a
           ><img
@@ -18,100 +17,106 @@
         /></a>
       </div>
       <div id="headerBtns">
-    <a class="button" href="index.html">MONSTER MATCH</a>
         <a class="button">Log In</a>
-
+        <a class="button" href="index.html">Home</a>
       </div>
     </header>
 
-<main class="section">
-  <div class="container">
-    <form class="form-card" action="index.html" method="get" >
-      <h1>Create account</h1>
-      <input type="text" name="name" placeholder="Name *" required />
-      <select name="age" required>
-  <option value="" disabled selected hidden>Age *</option>
-  <option value="18-25">18–25</option>
-  <option value="26-35">26–35</option>
-  <option value="36-45">36–45</option>
-  <option value="46-60">46–65</option>
-  <option value="61-100">61–100</option>
-</select>
-      <input type="text" name="city" placeholder="City *" required />
+    <main>
+      <div class="container">
+        <form class="form-card" action="index.html" method="get">
+          <h1>Create account</h1>
+          <input type="text" name="name" placeholder="Name *" required />
+          <select name="age" required>
+            <option value="" disabled selected hidden>Age *</option>
+            <option value="18-25">18–25</option>
+            <option value="26-35">26–35</option>
+            <option value="36-45">36–45</option>
+            <option value="46-60">46–65</option>
+            <option value="61-100">61–100</option>
+          </select>
+          <input type="text" name="city" placeholder="City *" required />
 
+          <select name="gender" required>
+            <option value="" disabled selected hidden>Gender *</option>
+            <option>Woman</option>
+            <option>Man</option>
+            <option>Prefer not to say</option>
+          </select>
+          <br />
+          <input type="email" name="email" placeholder="Email *" required />
+          <input
+            type="text"
+            name="username"
+            placeholder="Username *"
+            required
+            minlength="3"
+          />
 
-      <select name="gender" required>
-        <option value=""disabled selected hidden>Gender *</option>
-        <option>Woman</option>
-        <option>Man</option>
-        <option>Prefer not to say</option>
-      </select>
-      <br>     
-      <input type="email" name="email" placeholder="Email *" required />
-      <input type="text" name="username" placeholder="Username *" required minlength="3" />
-      
-      <input type="password" name="password" placeholder="Password *" required minlength="8" />
-      <input type="password" name="password2" placeholder="Repeat password *" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password *"
+            required
+            minlength="8"
+          />
 
-      
-      
-      
-      <!-- Work style -->
-      <div class="inline-group1">
-        <p>Looking for:</p>
-        <label><input type="radio" name="prefer" required /> Woman</label>
-        <label><input type="radio" name="prefer" /> Man</label>
-        <label><input type="radio" name="prefer" /> Anything</label>
+          <div class="inline-group1">
+            <p>I Am Looking for:</p>
+            <label><input type="radio" name="prefer" required /> Women</label>
+            <label><input type="radio" name="prefer" /> Men</label>
+            <label><input type="radio" name="prefer" /> Any</label>
+          </div>
+
+          <textarea
+            name="bio"
+            rows="2"
+            placeholder="Short bio (optional)"
+          ></textarea>
+
+          <div class="inline-group2">
+            <p>I Mostly Drink Monster at:</p>
+            <label><input type="checkbox" name="interests" /> Parties</label>
+            <label><input type="checkbox" name="interests" /> Home</label>
+            <label
+              ><input type="checkbox" name="interests" /> Friends House</label
+            >
+            <label><input type="checkbox" name="interests" /> Other</label>
+          </div>
+
+          <div class="inline-group3">
+            <input
+              type="text"
+              name="drink"
+              placeholder="Favorite Monster Energy *"
+              required
+            />
+          </div>
+
+          <p>My Energy Level</p>
+          <label class="range-label">
+            <input type="range" name="energy" min="0" max="100" step="5" />
+          </label>
+          <br />
+
+          <p>Upload profile picture (optional)</p>
+          <input type="file" name="photo" accept=".jpg,.png" />
+
+          <label class="check">
+            <input type="checkbox" required /> I accept the terms *
+          </label>
+
+          <label class="check">
+            <input type="checkbox" /> Send me email updates
+          </label>
+
+          <button class="btn btn-primary" type="submit">Create account</button>
+          <a class="btn btn-secondary" href="index.html">Back</a>
+        </form>
       </div>
-      <textarea name="bio" rows="3" placeholder="Short bio (optional)"></textarea>
-
-      
-      
-      <!-- Interests -->
-      <div class="inline-group2">
-        <p>I Mostly Drink Monster at:</p>
-        <label><input type="checkbox" name="interests" /> Parties</label>
-        <label><input type="checkbox" name="interests" /> Home</label>
-        <label><input type="checkbox" name="interests" /> Hassans house</label>
-        <label><input type="checkbox" name="interests" /> Other</label>
-      </div>
-
-      <div class="inline-group3">
-      <input type="text" name="drink" placeholder="Favorite Monster *" required />
-      </div>
-
-
-      
-      
-      <p>Energy Level
-      </p>
-      <label class="range-label">
-        <input type="range" name="energy" min="0" max="100" step="5" required />
-      </label>
-      <br>     
-      
-      <!-- Upload --> 
-      <p>Upload profile picture</p>
-      <input type="file" name="photo" accept=".jpg,.png" required />
-      
-      <!-- Consent -->
-      <label class="check">
-        <input type="checkbox" required /> I accept the terms *
-      </label>
-      
-      <label class="check">
-        <input type="checkbox" /> Send me updates
-      </label>
-      
-      <!-- Actions -->
-      <button class="btn btn-primary" type="submit">Create account</button>
-      <a class="btn btn-secondary" href="index.html">Back</a>
-    </form>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <p>© Monster Match </p>
-</footer>
-</body>
+    </main>
+    <footer class="site-footer">
+      <p>© Monster Match Dating App</p>
+    </footer>
+  </body>
 </html>
