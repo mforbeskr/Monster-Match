@@ -9,6 +9,12 @@
   input[type="range"] {
     width: 60%;
   }
+  #indexUpperPicture img {
+   width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-bottom: 14px;
+}
 }
 
 @media (min-width: 900px) {
@@ -70,8 +76,10 @@ main h1 {
 }
 
 #indexUpperPicture img {
-  max-width: 450px;
+   width: 100%;
+  max-width: 650px;
   height: auto;
+  margin-bottom: 14px;
 }
 
 #whyYouShould {
@@ -102,6 +110,12 @@ main h1 {
   color: #65ba21;
   font-size: 1.9rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.quote-block p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .quote-block {
@@ -147,6 +161,9 @@ textarea {
   font-size: 1rem;
   margin: 7px;
   cursor: text;
+  resize: both;
+  max-width: 40%;
+
 }
 select,
 button,
@@ -198,6 +215,8 @@ select {
   gap: 8px;
   cursor: pointer;
   color: #abec76;
+  
+  width: fit-content;
 }
 
 .btn {
