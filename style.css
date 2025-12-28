@@ -45,13 +45,15 @@ header .button:hover {
 
 main h1 {
   color: #65ba21;
-  font-size: 1.7rem;
+  font-size: 2.4rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 #whyYouShould {
-  color: #abec76;
-  font-size: 1.3rem;
+  color: #65ba21;
+  font-size: 2.4rem;
   margin-top: 45px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .imagerow {
@@ -68,6 +70,7 @@ main h1 {
   max-width: 350px;
   height: auto;
   border-radius: 8px;
+  margin-bottom: 14px;
 }
 
 /*____________________________________________________________________*/
@@ -76,87 +79,19 @@ main h1 {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-.section {
-  padding: 48px 0;
-}
-
-.site-header {
-  border-bottom: 1px solid rgba(101, 186, 33, 0.3);
-}
-
-.header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 16px;
   flex-wrap: wrap;
-}
-
-.brand-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #65ba21;
-  text-decoration: none;
-}
-
-.nav {
-  display: flex;
-  gap: 16px;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav-link:hover {
   color: #abec76;
 }
 
 .form-card {
+  flex-wrap: wrap;
   background: #0e0e0e;
   border-radius: 12px;
-  padding: 32px;
   box-shadow: 0 0 0 1px rgba(101, 186, 33, 0.25);
-}
-
-.page-title {
-  margin: 0 0 8px;
-  color: #65ba21;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-}
-
-.page-subtitle {
-  margin-bottom: 32px;
-  color: #abec76;
-}
-
-.fieldset {
-  border: 1px solid rgba(101, 186, 33, 0.3);
-  border-radius: 10px;
-  padding: 24px;
-  margin-bottom: 24px;
-}
-
-.legend {
-  padding: 0 8px;
-  color: #65ba21;
-  font-weight: bold;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-
-label,
-.label {
-  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 45px;
 }
 
 input,
@@ -168,6 +103,8 @@ textarea {
   border-radius: 6px;
   padding: 10px 12px;
   font-size: 1rem;
+  cursor: pointer;
+  margin: 4px;
 }
 
 input::placeholder,
@@ -175,40 +112,23 @@ textarea::placeholder {
   color: #888;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #abec76;
-  box-shadow: 0 0 0 2px rgba(171, 236, 118, 0.25);
+.inline-group1 {
+  margin-top: 19px;
+  margin-bottom: 14px;
+}
+.inline-group2 {
+  margin-top: 14px;
+}
+.inline-group3 {
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+select {
+  color: #888;
 }
 
-.help {
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.error {
-  font-size: 0.85rem;
-  color: #ff6b6b;
-  display: none;
-}
-
-input:invalid + .help + .error,
-select:invalid + .error {
-  display: block;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.choices {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+select:valid {
+  color: white;
 }
 
 .choices label,
@@ -219,21 +139,15 @@ select:invalid + .error {
   cursor: pointer;
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 24px;
-}
-
 .btn {
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: bold;
-  border: none;
   cursor: pointer;
   text-decoration: none;
+  margin: 4px;
+  border: 1px solid #ffffff;
+  background: #65ba21;
 }
 
 .btn-primary {
@@ -249,25 +163,25 @@ select:invalid + .error {
   background: #222;
   color: white;
   border: 1px solid #65ba21;
+  font-size: 0.9rem;
 }
 
 .btn-secondary:hover {
   background: #333;
 }
 
-.btn-ghost {
-  background: transparent;
-  color: #abec76;
+input[type="range"] {
+  appearance: none;
+  width: 20%;
+  height: 1px;
+  background: #65ba21;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  margin-bottom: 9px;
+  cursor: pointer;
 }
 
 .site-footer {
   border-top: 1px solid rgba(101, 186, 33, 0.3);
   margin-top: 64px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 0;
-  font-size: 0.9rem;
 }
