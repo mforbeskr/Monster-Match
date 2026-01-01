@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up – Monster Match</title>
+    <title>Sign Up - Monster Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -26,14 +26,14 @@
       <div class="container">
         <form class="form-card" action="index.html" method="post" enctype="multipart/form-data">
           <h1>Create account</h1>
-          <input type="text" name="name" placeholder="Name *" required />
+          <input type="text" name="name" placeholder="Name *" required autocomplete="" />
           <select name="age" required>
             <option value="" disabled selected hidden>Age *</option>
-            <option value="18-25">18–25</option>
-            <option value="26-35">26–35</option>
-            <option value="36-45">36–45</option>
-            <option value="46-60">46–65</option>
-            <option value="61-100">61–100</option>
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+            <option value="46-60">46-65</option>
+            <option value="61-100">61-100</option>
           </select>
           <input type="text" name="city" placeholder="City *" required />
 
@@ -44,12 +44,13 @@
             <option>Prefer not to say</option>
           </select>
 
-          <input type="email" name="email" placeholder="Email *" required />
+          <input type="email" name="email" placeholder="Email *" required autocomplete/>
           <input
             type="text"
             name="username"
             placeholder="Username *"
             required
+            autocomplete
             minlength="3"
           />
 
@@ -102,11 +103,11 @@
           <input type="file" name="photo" accept=".jpg,.png" />
 
           <label class="check">
-            <input type="checkbox" required /> I accept the terms *
+            <input type="checkbox" name="AcceptTerms" required /> I accept the terms *
           </label>
 
           <label class="check">
-            <input type="checkbox" /> Send me email updates
+            <input type="checkbox" name="sendUpdates" /> Send me email updates
           </label>
 
           <button class="btn btn-primary" type="submit">Create account</button>
